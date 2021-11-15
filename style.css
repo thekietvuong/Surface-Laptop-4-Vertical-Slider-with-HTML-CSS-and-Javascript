@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+  }
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.slider-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+/* -----------left---------- */
+.left{
+    height: 100%;
+    width: 30%;
+    transition: transform .5s ease-in-out;
+}
+
+.left > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left > div img{
+    height: 50px;
+    width: auto;
+    margin: 20px auto;
+}
+
+.left > div h1{
+    color: white;
+}
+
+.left > div p{
+    color: white;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+/* -----------right----------- */
+.right{
+    height: 100%;
+    width: 70%;
+    transition: transform .5s ease-in-out;
+
+}
+
+.right > div{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+}
+
+/* -----------button----------- */
+button{
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+    margin: 0;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+.button .up-button{
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button .down-button{
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button:hover{
+    color: #222;
+}
+
+button:focus{
+    outline: none;
+}
